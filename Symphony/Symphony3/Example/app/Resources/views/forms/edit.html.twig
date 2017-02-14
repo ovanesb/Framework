@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {{ form_start(form) }}
+
+        {{ form_label(form.name, 'Name') }}
+        {{ form_widget(form.name, { 'value':link.name}) }}
+        
+        {{ form_label(form.destination, 'Destination', {'label_attr': {'class': 'foo'}}) }}
+        {{ form_widget(form.destination, { 'value':link.destination}) }}
+        
+        {{ form_widget(form.id, { 'value': link.id }) }}
+
+    {{ form_end(form) }}    
+ 
+{% endblock %}
